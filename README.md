@@ -1,22 +1,20 @@
 # Analytics Transporte - Lima
 
-Soy Gian Cruz.
+¿Sabías que Lima mueve más de 10 millones de viajes diarios pero su sistema de transporte masivo apenas cubre el 15% de la demanda? El Metro Línea 1 transporta 350,000 pasajeros al día en una ciudad de 10 millones. Durante la pandemia, la movilidad cayó un 80% y algunos sistemas tardaron más de dos años en recuperar niveles pre-COVID.
 
-Pipeline de analisis del transporte publico masivo de Lima Metropolitana. Procesa datos de pasajeros del Metro Linea 1, el Metropolitano (BRT) y los corredores complementarios. Mide estacionalidad, participacion por sistema y el impacto del COVID-19 en la movilidad urbana.
+Soy Gian Cruz. Construí este pipeline para analizar los datos de pasajeros del Metro, el Metropolitano (BRT) y los corredores complementarios publicados por la ATU y el MTC. Mide estacionalidad, participación de mercado por sistema, variaciones interanuales y genera un índice de recuperación COVID con base 2019.
 
-Lima mueve mas de 10 millones de viajes diarios. El sistema de transporte masivo (Metro + Metropolitano + Corredores) transporta una fraccion de eso, pero su crecimiento y recuperacion post-pandemia son indicadores clave de la movilidad urbana.
-
-## Que hace
+## Qué hace
 
 - Carga datos de pasajeros desde CSVs (datos abiertos ATU/MTC)
-- Limpia, normaliza y elimina registros invalidos
-- Calcula variacion interanual (YoY) por sistema
-- Genera participacion de mercado por sistema/anio
-- Patron de estacionalidad mensual
-- Indice de recuperacion COVID (base 2019)
+- Limpia, normaliza y elimina registros inválidos
+- Calcula variación interanual (YoY) por sistema
+- Genera participación de mercado por sistema/año
+- Patrón de estacionalidad mensual
+- Índice de recuperación COVID (base 2019)
 - Carga a warehouse SQLite
 
-## Instalacion
+## Instalación
 
 ```bash
 python -m venv venv
@@ -71,8 +69,8 @@ Analytics pipeline for Lima's mass transit system. Processes ridership data for 
 
 ## Fuentes de datos
 
-| Fuente | Descripcion | Enlace |
+| Fuente | Descripción | Enlace |
 |--------|-------------|--------|
 | ATU - Datos Abiertos | Autoridad de Transporte Urbano de Lima y Callao | [https://www.atu.gob.pe/datos-abiertos/](https://www.atu.gob.pe/datos-abiertos/) |
-| MTC - Estadisticas de transporte | Ministerio de Transportes - estadisticas de transporte urbano | [https://portal.mtc.gob.pe/estadisticas/transportes/estadistica_transporte_urbano.html](https://portal.mtc.gob.pe/estadisticas/transportes/estadistica_transporte_urbano.html) |
+| MTC - Estadísticas de transporte | Ministerio de Transportes - estadísticas de transporte urbano | [https://portal.mtc.gob.pe/estadisticas/transportes/estadistica_transporte_urbano.html](https://portal.mtc.gob.pe/estadisticas/transportes/estadistica_transporte_urbano.html) |
 | OSITRAN | Organismo supervisor de la infraestructura de transporte | [https://www.ositran.gob.pe/](https://www.ositran.gob.pe/) |
