@@ -11,9 +11,9 @@ from src.transform.cleaner import clean_transport_data, add_period
 from src.transform.enricher import add_yoy_change, system_share, seasonal_pattern, covid_recovery
 from src.quality.validators import run_quality_report
 from src.load.exporter import init_db, load_to_db, export_csv
-from src.utils.logger import setup_logging
+from src.utils.logger import get_logger
 
-log = logging.getLogger(__name__)
+log = get_logger(__name__)
 
 
 def run_pipeline(raw_dir=None) -> dict:
@@ -62,7 +62,6 @@ def run_pipeline(raw_dir=None) -> dict:
 def main():
     parser = argparse.ArgumentParser(description="Analytics transporte Lima")
     args = parser.parse_args()
-    setup_logging()
     result = run_pipeline()
     print(json.dumps(result, indent=2, ensure_ascii=False))
 
