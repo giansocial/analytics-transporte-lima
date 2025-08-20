@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 
 def add_yoy_change(df: pd.DataFrame) -> pd.DataFrame:
