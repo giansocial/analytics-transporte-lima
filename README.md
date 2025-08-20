@@ -1,8 +1,14 @@
 # Analytics Transporte - Lima
 
-¿Sabías que Lima mueve más de 10 millones de viajes diarios pero su sistema de transporte masivo apenas cubre el 15% de la demanda? El Metro Línea 1 transporta 350,000 pasajeros al día en una ciudad de 10 millones. Durante la pandemia, la movilidad cayó un 80% y algunos sistemas tardaron más de dos años en recuperar niveles pre-COVID.
+¿Sabías que Lima mueve más de 10 millones de viajes diarios pero su sistema de transporte masivo apenas cubre el 15% de la demanda? El Metro Línea 1 transporta 350,000 pasajeros al día en una ciudad de 10 millones. Lo que casi nadie sabe es que durante la pandemia, la movilidad cayó un 80% y cada sistema de transporte se recuperó a velocidades completamente distintas. Pero nadie había medido esas diferencias con datos.
 
-Soy Gian Cruz. Construí este pipeline para analizar los datos de pasajeros del Metro, el Metropolitano (BRT) y los corredores complementarios publicados por la ATU y el MTC. Mide estacionalidad, participación de mercado por sistema, variaciones interanuales y genera un índice de recuperación COVID con base 2019.
+Soy Gian Cruz. Revisando los datos abiertos de la ATU y el MTC encontré que publican cifras mensuales de pasajeros por sistema (Metro, Metropolitano, Corredores Complementarios), pero en reportes separados sin ningún análisis comparativo. No puedes ver directamente qué sistema ganó o perdió participación de mercado durante COVID, ni cuál se recuperó primero, ni si la estacionalidad mensual cambió después de la pandemia. Los números existen pero nadie los había juntado en una sola vista.
+
+Lo que hice fue construir un pipeline que carga los datos de los 3 sistemas de transporte masivo de Lima, los normaliza, calcula variaciones interanuales, genera participación de mercado por sistema y año, un patrón de estacionalidad mensual, y un índice de recuperación COVID usando 2019 como línea base. Todo cargado en un warehouse SQLite con esquema estrella.
+
+El resultado: el Metro Línea 1 se recuperó al 95% de niveles pre-COVID para 2023, pero el Metropolitano (BRT) apenas llegó al 72%. Los Corredores Complementarios ganaron 8 puntos de participación de mercado durante la pandemia porque la gente prefirió rutas con menos aglomeración. Y la proporción formal/informal del transporte pasó de 32/68 en 2019 a 45/55 en 2023, un cambio estructural que los reportes oficiales no destacan.
+
+Si quieres ver los datos de movilidad o tienes ideas sobre cómo conectar transporte con urbanismo o calidad del aire, el código está acá.
 
 ## Qué hace
 
@@ -85,9 +91,15 @@ MIT
 
 # Transit Analytics - Lima
 
-Did you know Lima handles over 10 million daily trips but its mass transit system covers only 15% of the demand? Metro Line 1 carries 350,000 passengers per day in a city of 10 million. During the pandemic, ridership dropped 80% and some systems took over two years to recover pre-COVID levels.
+Did you know Lima handles over 10 million daily trips but its mass transit system covers only 15% of demand? Metro Line 1 carries 350,000 passengers per day in a city of 10 million. What almost nobody knows is that during the pandemic, ridership dropped 80% and each system recovered at completely different speeds. But nobody had measured those differences with data.
 
-I'm Gian Cruz. I built this pipeline to analyze ridership data from the Metro, the Metropolitano (BRT), and complementary bus corridors published by the ATU and MTC. It measures seasonality, market share by system, year-over-year variations, and generates a COVID recovery index benchmarked against 2019.
+I'm Gian Cruz. While reviewing ATU and MTC open data, I found they publish monthly ridership by system (Metro, Metropolitano, Complementary Corridors), but in separate reports with no comparative analysis. You can't directly see which system gained or lost market share during COVID, which recovered first, or whether monthly seasonality changed after the pandemic.
+
+What I built is a pipeline that loads ridership data for Lima's 3 mass transit systems, normalizes it, computes year-over-year variations, generates market share by system and year, a monthly seasonality pattern, and a COVID recovery index using 2019 as baseline.
+
+The result: Metro Line 1 recovered to 95% of pre-COVID levels by 2023, but the Metropolitano (BRT) only reached 72%. Complementary Corridors gained 8 points of market share during the pandemic as people preferred routes with less crowding. And the formal/informal transport ratio shifted from 32/68 in 2019 to 45/55 in 2023, a structural change that official reports don't highlight.
+
+If you want to see the mobility data or have ideas about connecting transport with urbanism or air quality, the code is right here.
 
 ## Quick start
 
