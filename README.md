@@ -59,14 +59,6 @@ analytics-transporte-lima/
 └── requirements.txt
 ```
 
----
-
-## What it does
-
-Analytics pipeline for Lima's mass transit system. Processes ridership data for Metro Line 1, Metropolitano (BRT), and complementary bus corridors. Measures seasonality, system market share, and COVID-19 impact on urban mobility.
-
----
-
 ## Fuentes de datos
 
 | Fuente | Descripción | Enlace |
@@ -74,3 +66,36 @@ Analytics pipeline for Lima's mass transit system. Processes ridership data for 
 | ATU - Datos Abiertos | Autoridad de Transporte Urbano de Lima y Callao | [https://www.atu.gob.pe/datos-abiertos/](https://www.atu.gob.pe/datos-abiertos/) |
 | MTC - Estadísticas de transporte | Ministerio de Transportes - estadísticas de transporte urbano | [https://portal.mtc.gob.pe/estadisticas/transportes/estadistica_transporte_urbano.html](https://portal.mtc.gob.pe/estadisticas/transportes/estadistica_transporte_urbano.html) |
 | OSITRAN | Organismo supervisor de la infraestructura de transporte | [https://www.ositran.gob.pe/](https://www.ositran.gob.pe/) |
+
+## Licencia
+
+MIT
+
+---
+
+# Transit Analytics - Lima
+
+Did you know Lima handles over 10 million daily trips but its mass transit system covers only 15% of the demand? Metro Line 1 carries 350,000 passengers per day in a city of 10 million. During the pandemic, ridership dropped 80% and some systems took over two years to recover pre-COVID levels.
+
+I'm Gian Cruz. I built this pipeline to analyze ridership data from the Metro, the Metropolitano (BRT), and complementary bus corridors published by the ATU and MTC. It measures seasonality, market share by system, year-over-year variations, and generates a COVID recovery index benchmarked against 2019.
+
+## Quick start
+
+```bash
+git clone https://github.com/giansocial/analytics-transporte-lima.git
+cd analytics-transporte-lima
+python -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+python -m src.pipeline
+```
+
+## Data sources
+
+| Source | Description | Link |
+|--------|-------------|------|
+| ATU - Open Data | Lima and Callao Urban Transport Authority | [https://www.atu.gob.pe/datos-abiertos/](https://www.atu.gob.pe/datos-abiertos/) |
+| MTC - Transport Statistics | Ministry of Transport - urban transit statistics | [https://portal.mtc.gob.pe/estadisticas/transportes/estadistica_transporte_urbano.html](https://portal.mtc.gob.pe/estadisticas/transportes/estadistica_transporte_urbano.html) |
+
+## License
+
+MIT
