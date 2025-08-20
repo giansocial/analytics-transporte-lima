@@ -67,6 +67,16 @@ analytics-transporte-lima/
 | MTC - Estadísticas de transporte | Ministerio de Transportes - estadísticas de transporte urbano | [https://portal.mtc.gob.pe/estadisticas/transportes/estadistica_transporte_urbano.html](https://portal.mtc.gob.pe/estadisticas/transportes/estadistica_transporte_urbano.html) |
 | OSITRAN | Organismo supervisor de la infraestructura de transporte | [https://www.ositran.gob.pe/](https://www.ositran.gob.pe/) |
 
+## Visualizaciones
+
+Resultados del analisis exploratorio (notebook completo en `notebooks/`):
+
+![Pasajeros mensuales por sistema de transporte](docs/images/grafico_01.png)
+
+![Participacion de mercado 2019 vs 2023](docs/images/grafico_02.png)
+
+![Indice de recuperacion COVID por sistema](docs/images/grafico_03.png)
+
 ## Licencia
 
 MIT
