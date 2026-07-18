@@ -6,19 +6,9 @@ Soy Gian Cruz. Revisando los datos abiertos de la ATU y el MTC encontré que pub
 
 Lo que hice fue construir un pipeline que carga los datos de los 3 sistemas de transporte masivo de Lima, los normaliza, calcula variaciones interanuales, genera participación de mercado por sistema y año, un patrón de estacionalidad mensual, y un índice de recuperación COVID usando 2019 como línea base. Todo cargado en un warehouse SQLite con esquema estrella.
 
-El resultado: el Metro Línea 1 se recuperó al 95% de niveles pre-COVID para 2023, pero el Metropolitano (BRT) apenas llegó al 72%. Los Corredores Complementarios ganaron 8 puntos de participación de mercado durante la pandemia porque la gente prefirió rutas con menos aglomeración. Y la proporción formal/informal del transporte pasó de 32/68 en 2019 a 45/55 en 2023, un cambio estructural que los reportes oficiales no destacan.
+Con los datos cruzados se ve que el Metro Línea 1 se recuperó al 95% de niveles pre-COVID para 2023, pero el Metropolitano (BRT) apenas llegó al 72%. Los Corredores Complementarios ganaron 8 puntos de participación de mercado durante la pandemia porque la gente prefirió rutas con menos aglomeración. Y la proporción formal/informal del transporte pasó de 32/68 en 2019 a 45/55 en 2023, un cambio estructural que los reportes oficiales no destacan.
 
 Si quieres ver los datos de movilidad o tienes ideas sobre cómo conectar transporte con urbanismo o calidad del aire, el código está acá.
-
-## Qué hace
-
-- Carga datos de pasajeros desde CSVs (datos abiertos ATU/MTC)
-- Limpia, normaliza y elimina registros inválidos
-- Calcula variación interanual (YoY) por sistema
-- Genera participación de mercado por sistema/año
-- Patrón de estacionalidad mensual
-- Índice de recuperación COVID (base 2019)
-- Carga a warehouse SQLite
 
 ## Instalación
 
@@ -97,7 +87,7 @@ I'm Gian Cruz. While reviewing ATU and MTC open data, I found they publish month
 
 What I built is a pipeline that loads ridership data for Lima's 3 mass transit systems, normalizes it, computes year-over-year variations, generates market share by system and year, a monthly seasonality pattern, and a COVID recovery index using 2019 as baseline.
 
-The result: Metro Line 1 recovered to 95% of pre-COVID levels by 2023, but the Metropolitano (BRT) only reached 72%. Complementary Corridors gained 8 points of market share during the pandemic as people preferred routes with less crowding. And the formal/informal transport ratio shifted from 32/68 in 2019 to 45/55 in 2023, a structural change that official reports don't highlight.
+Cross-referencing the data shows that Metro Line 1 recovered to 95% of pre-COVID levels by 2023, but the Metropolitano (BRT) only reached 72%. Complementary Corridors gained 8 points of market share during the pandemic as people preferred routes with less crowding. And the formal/informal transport ratio shifted from 32/68 in 2019 to 45/55 in 2023, a structural change that official reports don't highlight.
 
 If you want to see the mobility data or have ideas about connecting transport with urbanism or air quality, the code is right here.
 
