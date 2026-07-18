@@ -1,4 +1,3 @@
-import argparse
 import json
 import time
 
@@ -59,8 +58,6 @@ def run_pipeline(raw_dir=None) -> dict:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Analytics transporte Lima")
-    args = parser.parse_args()
     result = run_pipeline()
     print(json.dumps(result, indent=2, ensure_ascii=False))
 

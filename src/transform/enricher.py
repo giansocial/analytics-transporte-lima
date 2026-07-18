@@ -50,15 +50,3 @@ def covid_recovery(df: pd.DataFrame) -> pd.DataFrame:
                 "recuperacion_pct": pct,
             })
     return pd.DataFrame(results)
-
-
-def peak_hours_analysis(df: pd.DataFrame) -> pd.DataFrame:
-    if "hora_pico" not in df.columns:
-        return pd.DataFrame()
-    return (
-        df.groupby(["sistema", "hora_pico"])["pasajeros"]
-        .mean()
-        .round(0)
-        .reset_index()
-        .sort_values(["sistema", "pasajeros"], ascending=[True, False])
-    )

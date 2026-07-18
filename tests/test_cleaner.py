@@ -1,4 +1,3 @@
-import pytest
 import pandas as pd
 from src.transform.cleaner import clean_transport_data, add_period
 
